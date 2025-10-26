@@ -241,16 +241,14 @@ local function resolveRejoinOptions(options)
 end
 
 local function bedSpawn()
-    while localPlayer:GetAttribute("HasSpawned") do
-        task.wait(0.1)
-    end
-
-    while not localPlayer:GetAttribute("HasSpawned") do
+    while true do
         firesignal(bedButton.Activated)
 
-        local ok, err = pcall(spawnFirst.InvokeServer, spawnFirst, true)
-        if not ok and err then
-            warn("[AutoRebirth] SpawnFirst invoke failed:", err)
+        local ok, result = pcall(spawnFirst.InvokeServer, spawnFirst, true)
+        if not ok then
+            warn("[AutoRebirth] SpawnFirst invoke failed:", result)
+        elseif result then
+            break
         end
 
         task.wait(0.2)
@@ -279,6 +277,7 @@ local function getItemPosition(item)
     local ok = pcall(function()
         pivotCFrame = item:GetPivot()
     end)
+
     if ok and pivotCFrame then
         return pivotCFrame.Position
     end
