@@ -244,14 +244,14 @@ local function bedSpawn()
     while true do
         firesignal(bedButton.Activated)
 
+        task.wait(0.1)
+
         local ok, result = pcall(spawnFirst.InvokeServer, spawnFirst, true)
-        if not ok then
-            warn("[AutoRebirth] SpawnFirst invoke failed:", result)
-        elseif result then
+        if ok and result ~= false then
             break
         end
 
-        task.wait(0.2)
+        task.wait(5)
     end
 
     task.wait(1)
