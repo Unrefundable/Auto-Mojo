@@ -1,4 +1,4 @@
-local Players = game:GetService("Players")
+--[[ local Players = game:GetService("Players")
 
 if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -16,7 +16,7 @@ end
 localPlayer.CharacterAdded:Connect(onCharacterAdded)
 
 task.wait(2)
--- Script goes down here.
+-- Script goes down here. ]]
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TeleportService = game:GetService("TeleportService")
