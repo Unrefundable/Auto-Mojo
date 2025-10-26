@@ -523,6 +523,17 @@ if levelText == "lvl 100" then
     task.wait(0.2)
     firesignal(rebirthConfirmButton.Activated)
 
+    local respawned
+    if localPlayer.Character == character then
+        respawned = localPlayer.CharacterAdded:Wait()
+    else
+        respawned = localPlayer.Character
+    end
+
+    if respawned then
+        respawned:WaitForChild("HumanoidRootPart", 5)
+    end
+
     bedSpawn()
     pickupNearby(20)
     queueRejoin({waitBefore = 10})
