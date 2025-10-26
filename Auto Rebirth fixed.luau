@@ -447,8 +447,6 @@ while true do
     task.wait(0.25)
 end
 
-task.wait(0.2)
-
 pickupNearby(20)
 
 local function findGuiObject(parent, childName)
