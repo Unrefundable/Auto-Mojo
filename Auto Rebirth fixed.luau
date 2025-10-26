@@ -534,6 +534,7 @@ if levelText == "lvl 100" then
         respawned:WaitForChild("HumanoidRootPart", 5)
     end
 
+    task.wait(2)
     bedSpawn()
     pickupNearby(20)
     queueRejoin({waitBefore = 10})
