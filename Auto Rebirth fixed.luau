@@ -215,7 +215,7 @@ local queueteleport = missing(
 
 game.Players.LocalPlayer.OnTeleport:Connect(function(state)
     if queueteleport then
-        queueteleport("loadstring(game:HttpGet('hentaiporno.com'))()")
+        queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Unrefundable/Auto-Mojo/refs/heads/main/Auto%20Rebirth%20fixed.luau'))()")
     end
 end)
 
