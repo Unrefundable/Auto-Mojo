@@ -519,6 +519,7 @@ if levelText == "lvl 100" then
     end
 
     task.wait(1)
+    task.wait(0.5)
     firesignal(rebirthButton.Activated)
     task.wait(0.2)
     firesignal(rebirthConfirmButton.Activated)
