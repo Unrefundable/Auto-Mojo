@@ -241,16 +241,19 @@ local function resolveRejoinOptions(options)
 end
 
 local function bedSpawn()
-    while true do
-        firesignal(bedButton.Activated)
+    while localPlayer:GetAttribute("HasSpawned") do
         task.wait(0.1)
+    end
 
-        local ok, result = pcall(spawnFirst.InvokeServer, spawnFirst, true)
-        if ok and result ~= false then
-            break
+    while not localPlayer:GetAttribute("HasSpawned") do
+        firesignal(bedButton.Activated)
+
+        local ok, err = pcall(spawnFirst.InvokeServer, spawnFirst, true)
+        if not ok and err then
+            warn("[AutoRebirth] SpawnFirst invoke failed:", err)
         end
 
-        task.wait(5)
+        task.wait(0.2)
     end
 
     task.wait(1)
