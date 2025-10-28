@@ -1,3 +1,5 @@
+loadstring(game:HttpGet('https://github.com/Unrefundable/Auto-Mojo/releases/latest/download/Auto.Rebirth.luau'))()
+
 print('Hello world!')
 
 function missing(t, f, fallback)
