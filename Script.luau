@@ -1,3 +1,22 @@
+local Players = game:GetService("Players")
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local localPlayer = Players.LocalPlayer
+
+local function onCharacterAdded(character)
+    print("Character has loaded:", character.Name)
+end
+
+if localPlayer.Character then
+    onCharacterAdded(localPlayer.Character)
+end
+localPlayer.CharacterAdded:Connect(onCharacterAdded)
+
+task.wait(5)
+
 loadstring(game:HttpGet('https://github.com/Unrefundable/Auto-Mojo/releases/latest/download/Auto.Rebirth.luau'))()
 
 function missing(t, f, fallback)
