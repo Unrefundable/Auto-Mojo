@@ -1,7 +1,3 @@
-loadstring(game:HttpGet('https://github.com/Unrefundable/Auto-Mojo/releases/latest/download/Auto.Rebirth.luau'))()
-
-task.wait(5)
-
 if queue_on_teleport then
     game.Players.LocalPlayer.OnTeleport:Connect(function(State)
         if State == Enum.TeleportState.InProgress then
