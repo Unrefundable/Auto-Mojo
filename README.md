@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://discord.gg/XvYaxzDd">
-  <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.svg" alt="Discord" width="32" height="32">
+<img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
 </a>
   <strong>&nbsp;&nbsp;Auto Rebirth script for Booga Booga Reborn&nbsp;&nbsp;</strong>
   <a href="https://www.roblox.com/games/11729688377/Booga-Booga#!/game-instances">
