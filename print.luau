@@ -1,4 +1,4 @@
-print('Hello, world!')
+print('Hello world!')
 
 function missing(t, f, fallback)
     if type(f) == t then return f end
