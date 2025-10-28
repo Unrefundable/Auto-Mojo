@@ -1,0 +1,21 @@
+print('Hello, world!')
+
+function missing(t, f, fallback)
+    if type(f) == t then return f end
+    return fallback
+end
+
+-- Support for multiple executors including Delta
+queueteleport = missing("function", 
+    queue_on_teleport or 
+    queueonteleport or 
+    (delta and delta.queue_on_teleport) or 
+    (syn and syn.queue_on_teleport) or 
+    (fluxus and fluxus.queue_on_teleport)
+)
+
+game.Players.LocalPlayer.OnTeleport:Connect(function(State)
+    if queueteleport then
+        queueteleport("")
+    end
+end)
