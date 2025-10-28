@@ -16,6 +16,6 @@ queueteleport = missing("function",
 
 game.Players.LocalPlayer.OnTeleport:Connect(function(State)
     if queueteleport then
-        queueteleport("")
+        queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Unrefundable/Auto-Mojo/refs/heads/main/print.luau'))()")
     end
 end)
