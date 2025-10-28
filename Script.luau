@@ -1,7 +1,3 @@
-loadstring(game:HttpGet('https://github.com/Unrefundable/Auto-Mojo/releases/latest/download/Auto.Rebirth.luau'))()
-
-print('Hello world!')
-
 function missing(t, f, fallback)
     if type(f) == t then return f end
     return fallback
@@ -21,3 +17,5 @@ game.Players.LocalPlayer.OnTeleport:Connect(function(State)
         queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Unrefundable/Auto-Mojo/refs/heads/main/Script.luau'))()")
     end
 end)
+
+loadstring(game:HttpGet('https://github.com/Unrefundable/Auto-Mojo/releases/latest/download/Auto.Rebirth.luau'))()
